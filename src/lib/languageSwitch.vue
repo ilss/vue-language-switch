@@ -101,11 +101,11 @@ export default {
         expires: this.option.cookies.expires
       })
     },
-    _init (lang) {
+    _initLanguage (lang) {
       this.my18n.locale = lang
     },
     _handleSetLanguage (lang) {
-      this._init(lang)
+      this._initLanguage(lang)
       this._setSavedLanguage()
     }
   }
