@@ -1,14 +1,10 @@
 ## 国际化切换功能
 
 ```
-npm i
-npm run dev
-```
-
-> 依赖库
-
-```
+//安装依赖
 npm i -S vue-i18n element-ui js-cookie
+//运行项目
+npm run dev
 ```
 
 > 调用
@@ -35,7 +31,9 @@ main.js:
     template: '<App/>'
   })
 
-<sedu-language-switch cName="views-main-el-header-el-dropdown"
+
+<template> 加如下代码：
+  <sedu-language-switch cName="views-main-el-header-el-dropdown"
                       :my18n="this.$i18n" />
 ```
 
