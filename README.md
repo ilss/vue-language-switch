@@ -1,8 +1,9 @@
-## 国际化切换功能
+## 国际化切换下拉菜单组件
 
 ```
 //安装依赖
 npm i -S vue-i18n element-ui js-cookie
+//配置好语言文件，下方有详细说明。
 //运行项目
 npm run dev
 ```
@@ -32,7 +33,7 @@ main.js:
   })
 
 
-<template> 加如下代码：
+<template> 加如下代码，传入 $i18n 对象：
   <sedu-language-switch cName="views-main-el-header-el-dropdown"
                       :my18n="this.$i18n" />
 ```
