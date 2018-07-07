@@ -5,9 +5,6 @@
  * @LastEditTime: 2018-07-07 17:53:09
  * @Description: 
  */
-import Vue from 'vue';
-import i18n from '../lang';
-import elementUI from 'element-ui';
 import LanguageSwitch from './languageSwitch';
 
 const comment = {
@@ -18,7 +15,5 @@ const comment = {
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(comment);
 }
-Vue.use(elementUI, {
-  i18n: (key, value) => i18n.t(key, value),
-});
+
 export default comment;

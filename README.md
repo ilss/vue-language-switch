@@ -8,13 +8,33 @@ npm run dev
 > 依赖库
 
 ```
-vue-i18n
-element-ui
+npm i -S vue-i18n element-ui js-cookie
 ```
 
 > 调用
 
 ```
+main.js:
+  import elementUI from 'element-ui';
+  import i18n from './lang';
+  import seduLanguageSwitch from 'vue-language-switch'
+
+  //全局注册 elementUI 和 vue-language-switch
+  Vue.use(elementUI, {
+    i18n: (key, value) => i18n.t(key, value)
+  })
+  Vue.use(seduLanguageSwitch)
+
+  // 加载i18n
+  new Vue({
+    el: '#app',
+    i18n,
+    components: {
+      App
+    },
+    template: '<App/>'
+  })
+
 <sedu-language-switch cName="views-main-el-header-el-dropdown"
                       :my18n="this.$i18n" />
 ```
