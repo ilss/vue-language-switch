@@ -34,7 +34,7 @@ main.js:
 
 
 <template> 加如下代码，传入 $i18n 对象：
-  <sedu-language-switch cName="views-main-el-header-el-dropdown"
+  <sedu-language-switch cname="views-main-el-header-el-dropdown"
                       :my18n="this.$i18n" />
 ```
 
@@ -42,7 +42,7 @@ main.js:
 
 ```
 props: {
-    cName: {
+    cname: {
       type: String,
       default: ''
     },

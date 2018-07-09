@@ -1,7 +1,7 @@
 {
   "name": "vue-language-switch",
   "description": "Vue+Elementui+vue-i18n 国际化切换下拉组件",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "ilss <375259904@qq.com>",
   "license": "MIT",
   "main": "src/lib/index.js",
