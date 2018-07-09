@@ -77,33 +77,46 @@ src/
         ∟ views/
           ∟ main.js
             ...
-        ∟ index.js  //子语言包主入口 import子目录下的子文件
+        ∟ index.js  //子语言包主入口 import子目录下的子文件 结构仅供参考
 
 
-  ∟ index.js //全局配置在这里
-    ---
-      const i18n = new VueI18n({
-        locale: 'zh', // set locale
-        messages: {
-          zh: {
-            type: 'zh',
-            label: '简体中文',
-            ...ZhLocale,
-            ...ElementZhLocale
-          },
-          en: {
-            type: 'en',
-            label: 'English',
-            ...EnLocale,
-            ...ElementEnLocale
-          },
-          de: {
-            type: 'de',
-            label: 'German',
-            ...DeLocale,
-            ...ElementDeLocale
+    ∟ index.js // * 全局配置在这里
+      ---
+        import Vue from 'vue'
+        import VueI18n from 'vue-i18n'
+        import ElementEnLocale from 'element-ui/lib/locale/lang/en' // element-ui lang
+        import ElementZhLocale from 'element-ui/lib/locale/lang/zh-CN' // element-ui lang
+        import ElementDeLocale from 'element-ui/lib/locale/lang/de' // element-ui lang
+        import EnLocale from './en/'
+        import ZhLocale from './zh/'
+        import DeLocale from './de/'
+
+        Vue.use(VueI18n)
+
+        const i18n = new VueI18n({
+          locale: 'zh', // set locale
+          messages: {
+            zh: {
+              type: 'zh',           // * 必须
+              label: '简体中文',     // * 必须
+              ...ZhLocale,
+              ...ElementZhLocale
+            },
+            en: {
+              type: 'en',
+              label: 'English',
+              ...EnLocale,
+              ...ElementEnLocale
+            },
+            de: {
+              type: 'de',
+              label: 'German',
+              ...DeLocale,
+              ...ElementDeLocale
+            }
           }
-        }
-      })
-    ---
+        })
+
+        export default i18n
+      ---
 ```

@@ -7,7 +7,7 @@
  */
 <template>
   <el-dropdown @command="_handleSetLanguage"
-               :class="cName"
+               :class="cname"
                :style="myStyle">
     <span class="el-dropdown-link">
       {{my18n.messages[my18n.locale].label}}
@@ -37,7 +37,7 @@ export default {
     }
   },
   props: {
-    cName: {
+    cname: {
       type: String,
       default: ''
     },
