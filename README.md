@@ -42,10 +42,12 @@ main.js:
 
 ```
 props: {
+    // 自定义class
     cname: {
       type: String,
       default: ''
     },
+    // 自定义行内样式
     myStyle: {
       type: String,
       default: ''

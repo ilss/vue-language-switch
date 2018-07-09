@@ -7,6 +7,6 @@
  */
 export default {
   main: {
-    title: 'VUE 项目模板'
-  }
-}
+    title: 'VUE 项目模板',
+  },
+};
